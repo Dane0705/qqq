@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft Jhenghei";
+}
+.logo img{
+    width: 300px;
+}
+
+.top{
+    width: 100%;
+    height: 20px;
+}
+.top .blue{
+    background-color: #008cd6;
+    width: 100%;
+    height: 20px;
+    margin-bottom: 20px;
+}
+.top .logo{
+    margin: auto;
+    text-align: center;
+    /* margin-top: -10px; */
+}
+.top h1{
+    color: #008cd6;
+    font-weight: bold;
+    font-size: 32px;
+    margin-top: 20px;
+}
+/* Nav Done *******************************************************/
+/* .container{
+    margin-top: 220px;
+}
+button{
+    background-color: #008cd6;
+    display: block;
+    width:120px;
+    height: 40px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 40px;
+}
+form input{
+    width: 85%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border:1px rgb(124, 124, 124) solid ;
+}
+small{
+    margin-left: 25px;
+} */
+.bread{
+    margin-top: 120px;
+}
+.bread ul{
+    list-style: none;
+    font-size: 14px;
+}
+.home,.home:hover{
+    color: black;
+    text-decoration: none;
+}
+.member,.member:hover{
+    color: black;
+    text-decoration: none;
+}
+.select{
+    color: black;
+}
+.search{
+    padding: 0px 8px;
+    border: none;
+    background-color: #008cd6;
+    border-radius: 5px;
+    color: white;
+    margin-left: 8px;
+}
+thead{
+    background-color: #0278ae;
+    color: white;
+}
+th{
+    padding:5px 0px !important; 
+}
+.modal{
+    margin-top: 30px;
+}
+.modal-table td{
+    padding: 5px !important;
+    font-weight: 900;
+}
+#order-number{
+    color: rgb(252, 55, 104);
+}
+#order-dollars{
+    color: blue
+}
+td img{
+    width: 120px;
+    height: 120px;
+}
+.countbox{
+    position: relative;
+    display: block;
+}
+.countPrice{
+    position: absolute;
+    color: mediumblue;
+    font-style: italic;
+    font-size: 14px;
+    display: block;
+    right: 0px;
+    bottom:0px;
+}
+.product-name{
+    color: rgb(129, 129, 129);
+    font-size: 20px;
+}
+/* form Done *******************************************************/
+footer{
+    background-color: #008cd6;
+    margin-top: 120px;  
+    font-weight: 900;
+}
