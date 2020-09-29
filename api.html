@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/API.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/bootstrap.js"></script>
+</head>
+<body>
+    <nav class="top">
+        <div class="blue"></div>
+        <div class="logo">
+            <img src="./img/logo.png" alt="三井logo">
+        </div>
+    </nav>
+      <nav class="bread container">
+          <ul class="d-flex m-0 mb-2">
+              <li><a href="#" class="home">首頁></a></li>
+              <li><a href="#" class="member">會員專區></a></li>
+              <li><a href="#" class="order">訂單查詢</a></li>
+          </ul>
+          <p class="mb-0">檢視 
+              <select name="yourOlder" style="width:120px;margin-left:8px">
+                    <option value="全部訂單">全部訂單</option>
+                    <option value="2">1</option>
+                    <option value="3">2</option>
+                    <option value="4">3</option>
+              </select>
+              <button type="button" value="查詢" class="search mb-3">查詢</button><br>
+              <small class="text-danger">*點擊訂單可觀看訂單內容及詢問</small>
+          </p>
+          <table class="table">
+            <thead>
+              <tr class="text-center">
+                <th scope="col">訂單編號</th>
+                <th scope="col">訂購時間</th>
+                <th scope="col">金額</th>
+              </tr>
+            </thead>
+            <tbody style="font-size: 14px;" id="soild-table">
+                <tr href="#" data-toggle="modal" data-target="#exampleModal">
+                  <td>C1200801298</td>
+                  <td>2020-08-24</td>
+                  <td class="text-right">$1000</td>  
+                </tr>
+              <tr href="#" data-toggle="modal" data-target="#exampleModal">
+                <td>C1200801293</td>
+                <td>2020-08-24</td>
+                <td class="text-right">$3000</td>
+              </tr>
+              <tr href="#" data-toggle="modal" data-target="#exampleModal">
+                <td>C8888888888</td>
+                <td>2020-08-24</td>
+                <td class="text-right">$3000</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="modal fade text-left" id="exampleModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" class="close ml-auto mr-3 mt-2" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body py-0">
+                  <div data-spy="scroll" data-target="#navbar-example" data-offset="0" style="height:680px;overflow:auto; position: relative;">
+                    <table class="table modal-table" id="modal-table">
+                        <!-- <tbody>
+                            <tr>
+                                <td style="border-top: none;">訂單編號</td>
+                                <td style="width: 230px;border-top: none" id="order-number">20200926000033</td>
+                            </tr>
+                            <tr>
+                                <td>訂購日期</td>
+                                <td id="order-date">2</td>
+                            </tr>
+                            <tr>
+                                <td>付款方式</td>
+                                <td id="order-payment">2</td>
+                            </tr>
+                            <tr>
+                                <td>訂購金額</td>
+                                <td id="order-dollars">NT$<span>599</span>元</td>
+                            </tr>
+                            <tr>
+                                <td>訂單狀態</td>
+                                <td id="order-situation">2</td>
+                            </tr>
+                            <tr>
+                                <td>收件人</td>
+                                <td id="order-recipient">2</td>
+                            </tr>
+                            <tr>
+                                <td>收件人電話</td>
+                                <td id="order-phone">2</td>
+                            </tr>
+                            <tr>
+                                <td>收件人地址</td>
+                                <td id="order-address">2</td>
+                            </tr>
+                            <tr>
+                                <td>發票資訊</td>
+                                <td id="order-info">2</td>
+                            </tr>
+                            <tr>
+                                <td>貨運狀態</td>
+                                <td id="order-delivery">2</td>
+                            </tr>
+                            <tr>
+                                <td>取消/退貨</td>
+                                <td id="order-cancel">2</td>
+                            </tr>
+                            <tr>
+                                <td>商品資料 :</td>
+                                <td id="order-product">
+                                  <img src="./img/CSET328-狂風勇者.jpg" alt="">
+                                  <p class="m-0 mt-1" id="product-name">[ TP-LINK ]Archer C20 AC750 無線雙頻路由器V4</p>
+                                  <p class="countPrice m-0">
+                                    <span class="count">數量 : 1</span> <span class="price">總價 : $1999</span>
+                                  </p>
+                                  <img src="./img/CSET328-狂風勇者.jpg" alt="">
+                                  <p class="m-0 mt-1" id="product-name">[ TP-LINK ]Archer C20 AC750 無線雙頻路由器V4</p>
+                                  <p class="countPrice m-0">
+                                    <span class="count">數量 : 1</span> <span class="price">總價 : $1999</span>
+                                  </p>
+                                  <img src="./img/CSET328-狂風勇者.jpg" alt="">
+                                  <p class="m-0 mt-1" id="product-name">[ TP-LINK ]Archer C20 AC750 無線雙頻路由器V4</p>
+                                  <p class="countPrice m-0">
+                                    <span class="count">數量 : 1</span> <span class="price">總價 : $1999</span>
+                                  </p>
+                                </td>
+                            </tr>
+                        </tbody> -->
+                    </table>
+                  </div> 
+                 </div>
+               </div>
+            </div>
+          </div>
+      </nav>
+    <footer>
+        <P class="pt-4 pl-4 text-white">產品諮詢/客戶服務 : 0809-008-001</P>
+        <P class="pl-4 text-white">服務時間:週一到週五9:00~18:00例假日除外</P>
+        <p class="text-white text-center pb-4 m-0">©三井資訊股份公司</p>   
+    </footer>
+    <script src="./js/API-2.js"></script>  
+</body>
+</html>
